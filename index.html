@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ライフパス診断 | 石の紬</title>
+  <meta name="description" content="生年月日から守護石とあなたへのメッセージを診断します。石の紬のライフパス診断。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-decoration">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+  </div>
+
+  <!-- TOP画面 -->
+  <section id="screen-top" class="screen active">
+    <div class="container">
+      <div class="logo-area">
+        <p class="brand-sub">石の紬 / stone_andyou</p>
+        <h1 class="brand-title">ライフパス<br />守護石診断</h1>
+        <p class="brand-desc">生年月日から、あなたの守護石と<br />今日のメッセージをお届けします</p>
+      </div>
+      <div class="stone-icon">🪨</div>
+      <div class="form-area">
+        <label class="form-label">生年月日を入力してください</label>
+        <input type="date" id="birthdate-input" class="date-input" max="2010-12-31" min="1940-01-01" />
+        <p class="form-note">※入力した情報は保存されません</p>
+        <button id="btn-diagnose" class="btn-primary" onclick="startDiagnosis()">
+          守護石を診断する
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ローディング画面 -->
+  <section id="screen-loading" class="screen">
+    <div class="container center">
+      <div class="loading-stone">🔮</div>
+      <p class="loading-text">あなたの守護石を<br />読み取っています…</p>
+      <div class="dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 結果画面 -->
+  <section id="screen-result" class="screen">
+    <div class="container">
+      <p class="result-brand">石の紬 / stone_andyou</p>
+      <div class="result-number-area">
+        <p class="result-label">あなたのライフパスナンバーは</p>
+        <div class="result-number" id="result-number">4</div>
+      </div>
+      <div class="result-title-area">
+        <h2 class="result-title" id="result-title">積み重ねの人</h2>
+        <p class="result-keywords" id="result-keywords">堅実さ・誠実さ・忍耐力</p>
+      </div>
+
+      <div class="result-card stone-card">
+        <p class="card-label">✦ 守護石</p>
+        <p class="card-value" id="result-stone">タイガーアイ / ヘマタイト</p>
+        <p class="card-desc" id="result-stone-desc">地に足のついた力強さと、ブレない意志を支えてくれる石です。</p>
+      </div>
+
+      <div class="result-card message-card">
+        <p class="card-label">✦ 今日のメッセージ</p>
+        <p class="card-message" id="result-message">焦らなくて大丈夫。あなたが積み重ねてきたものは、ちゃんと形になっています。</p>
+      </div>
+
+      <div class="line-cta">
+        <p class="line-cta-text">もっと詳しい鑑定を<br />LINEで受け取りませんか？</p>
+        <p class="line-cta-sub">守護石の選び方・石の販売もLINEにて</p>
+        <a id="line-btn" href="#" class="btn-line" target="_blank" rel="noopener">
+          <svg class="line-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.01 2 10.97c0 4.07 2.87 7.49 6.84 8.72.5.09.68-.22.68-.48v-1.7c-2.79.61-3.38-1.34-3.38-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.84c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48C19.14 18.46 22 15.04 22 10.97 22 6.01 17.52 2 12 2z"/>
+          </svg>
+          LINEで詳しく診断してもらう
+        </a>
+        <p class="line-cta-note">※ボタンをタップするとLINEが開きます</p>
+      </div>
+
+      <button class="btn-retry" onclick="resetDiagnosis()">もう一度診断する</button>
+    </div>
+  </section>
+
+  <script src="lifepath.js"></script>
+</body>
+</html>
