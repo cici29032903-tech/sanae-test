@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LINEで占い・守護石診断 | 石の紬</title>
+  <meta name="description" content="天然石×AI占い。LINEで個別の守護石診断・AI鑑定が受けられます。石の紬 / stone_andyou" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lp.css" />
+</head>
+<body>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="lp-header">
+    <p class="header-brand">石の紬 / stone_andyou</p>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Instagramを見てくれたあなたへ</p>
+      <h1 class="hero-title">
+        天然石とAI占いで<br />
+        あなたの毎日を<br />
+        <span class="hero-accent">もっと軽くしたい。</span>
+      </h1>
+      <p class="hero-body">
+        はじめまして、石の紬です。<br />
+        インスタで天然石とAI占いを発信していますが、<br />
+        短い投稿では伝えきれないことがたくさんあって。<br /><br />
+        だからLINEを作りました。<br />
+        あなただけに届く言葉を、ここで送りたいんです。
+      </p>
+      <a href="#line-cta" class="btn-hero">LINEでつながってみる</a>
+    </div>
+    <div class="hero-stones">
+      <span class="hs s1">🪨</span>
+      <span class="hs s2">💜</span>
+      <span class="hs s3">🤍</span>
+      <span class="hs s4">✨</span>
+      <span class="hs s5">🔮</span>
+    </div>
+  </section>
+
+  <!-- ===== LINEでできること ===== -->
+  <section class="section bg-cream">
+    <div class="container">
+      <p class="section-eyebrow">LINEでできること</p>
+      <h2 class="section-title">インスタより<br />もっと深く、あなたのそばに</h2>
+      <p class="section-lead">
+        インスタの投稿は「みんなに向けたもの」。<br />
+        LINEは「あなたひとりに向けたもの」です。
+      </p>
+
+      <div class="benefit-list">
+        <div class="benefit-card">
+          <div class="benefit-icon">🔮</div>
+          <div class="benefit-body">
+            <h3 class="benefit-title">個別AI鑑定</h3>
+            <p class="benefit-desc">生年月日や今の悩みを教えてもらえれば、AIがあなただけの鑑定文を作成。投稿では出せない「あなた専用の言葉」をお届けします。</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🪨</div>
+          <div class="benefit-body">
+            <h3 class="benefit-title">守護石の提案・購入</h3>
+            <p class="benefit-desc">鑑定結果に合わせて、今のあなたに必要な石をご提案。気に入った石はそのままLINEでご注文いただけます。</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌙</div>
+          <div class="benefit-body">
+            <h3 class="benefit-title">今日のメッセージ配信</h3>
+            <p class="benefit-desc">ライフパスナンバーに合わせた今日のメッセージを不定期でお届け。「そうそう、それ！」という言葉に出会えるかもしれません。</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <div class="benefit-body">
+            <h3 class="benefit-title">気軽に話しかけてOK</h3>
+            <p class="benefit-desc">「この石ってどんな意味？」「最近なんかしんどい…」そんな一言でも大丈夫。一緒に考えます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 石の意味ミニ辞典 ===== -->
+  <section class="section">
+    <div class="container">
+      <p class="section-eyebrow">石の紬より</p>
+      <h2 class="section-title">石には、それぞれの<br />「言葉」があります</h2>
+      <p class="section-lead">
+        インスタでは伝えきれない、石のほんとうの意味。<br />
+        気になる石をタップしてみてください。
+      </p>
+
+      <div class="stone-grid">
+        <button class="stone-chip" onclick="toggleStone('amethyst')">アメジスト</button>
+        <button class="stone-chip" onclick="toggleStone('rose')">ローズクォーツ</button>
+        <button class="stone-chip" onclick="toggleStone('tiger')">タイガーアイ</button>
+        <button class="stone-chip" onclick="toggleStone('moonstone')">ムーンストーン</button>
+        <button class="stone-chip" onclick="toggleStone('citrine')">シトリン</button>
+        <button class="stone-chip" onclick="toggleStone('labradorite')">ラブラドライト</button>
+        <button class="stone-chip" onclick="toggleStone('hematite')">ヘマタイト</button>
+        <button class="stone-chip" onclick="toggleStone('pyrite')">パイライト</button>
+        <button class="stone-chip" onclick="toggleStone('carnelian')">カーネリアン</button>
+        <button class="stone-chip" onclick="toggleStone('lapis')">ラピスラズリ</button>
+        <button class="stone-chip" onclick="toggleStone('selenite')">セレナイト</button>
+        <button class="stone-chip" onclick="toggleStone('aquamarine')">アクアマリン</button>
+      </div>
+
+      <div class="stone-detail" id="stone-detail">
+        <div class="stone-detail-inner" id="stone-detail-inner">
+          <p class="stone-detail-placeholder">気になる石をタップしてみてください</p>
+        </div>
+      </div>
+
+      <p class="stone-note">
+        ※ あなたに合う石は、生年月日や今の状況によって変わります。<br />
+        LINEではより詳しい守護石診断ができます。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== よくある不安Q&A ===== -->
+  <section class="section bg-cream">
+    <div class="container">
+      <p class="section-eyebrow">不安なことがあれば</p>
+      <h2 class="section-title">「LINEって大丈夫？」<br />よく聞かれることにお答えします</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>個人情報は漏れませんか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>LINEのトーク内容は私だけが見ます。名前・住所・電話番号などをこちらから聞くことはありませんし、第三者に共有することも絶対にありません。また、石を注文いただいた場合の発送先は、ご注文時に確認するだけで、それ以外には使用しません。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>しつこい勧誘や高額商品の押し売りはありますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>一切ありません。私が大切にしているのは「その人に合った石との出会い」。必要のない方に無理に売ることはしませんし、ブロックもいつでも自由にしていただけます。返信したくない時は、しなくても大丈夫です。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>登録は無料ですか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>LINEの登録・トーク・簡単な相談は無料です。個別の詳細鑑定（長文・複数の質問対応など）は有料メニューをご案内することがありますが、事前にお伝えしますので、いきなり請求されることはありません。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>メッセージはすぐ返ってきますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>石に関する簡単な質問や守護石診断（生年月日を送るだけ）は、自動で返信が届きます。詳しい個別鑑定のご相談は、基本的に24時間以内にお返事します。返信が遅くなる場合はご了承ください。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>登録したら大量にメッセージが来ますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>頻繁にメッセージを送ることはありません。配信は週1〜2回程度で、今日のメッセージや石のご紹介など、役に立つ内容だけをお届けしています。「静かなLINE」を心がけています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 登録の流れ ===== -->
+  <section class="section">
+    <div class="container">
+      <p class="section-eyebrow">登録は30秒で完了</p>
+      <h2 class="section-title">LINEに来るまで、<br />たった3ステップ</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3 class="step-title">ボタンをタップ</h3>
+            <p class="step-desc">このページ下のLINEボタンをタップするだけ。アプリが自動で開きます。</p>
+          </div>
+        </div>
+        <div class="step-arrow">↓</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3 class="step-title">「友だち追加」をタップ</h3>
+            <p class="step-desc">石の紬のLINEアカウントが開くので、「友だち追加」ボタンを押すだけ。</p>
+          </div>
+        </div>
+        <div class="step-arrow">↓</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3 class="step-title">「こんにちは」と送ってみる</h3>
+            <p class="step-desc">それだけで大丈夫。守護石診断の案内が届きます。話しかけるタイミングはいつでもOKです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LINE CTA ===== -->
+  <section class="section cta-section" id="line-cta">
+    <div class="container">
+      <div class="cta-box">
+        <p class="cta-eyebrow">今だけ</p>
+        <h2 class="cta-title">LINE登録で<br />守護石診断を<br /><span class="cta-accent">無料プレゼント</span></h2>
+        <p class="cta-desc">
+          生年月日を送るだけで、あなたのライフパスナンバー・守護石・今日のメッセージをお届けします。
+        </p>
+        <ul class="cta-list">
+          <li>✦ 守護石とその意味</li>
+          <li>✦ あなたへの今日のメッセージ</li>
+          <li>✦ 今の状況に合う石のご提案</li>
+        </ul>
+        <a href="https://lin.ee/XXXXXXXX" class="btn-line-main" target="_blank" rel="noopener">
+          <svg class="line-icon-lg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.01 2 10.97c0 4.07 2.87 7.49 6.84 8.72.5.09.68-.22.68-.48v-1.7c-2.79.61-3.38-1.34-3.38-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.84c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48C19.14 18.46 22 15.04 22 10.97 22 6.01 17.52 2 12 2z"/>
+          </svg>
+          LINE登録はこちら（無料）
+        </a>
+        <p class="cta-note">※ ブロックはいつでもできます。勧誘は一切しません。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== フッター ===== -->
+  <footer class="lp-footer">
+    <p class="footer-brand">石の紬 / stone_andyou</p>
+    <p class="footer-links">
+      <a href="index.html">ライフパス診断</a>
+    </p>
+    <p class="footer-copy">© 石の紬</p>
+  </footer>
+
+  <script src="lp.js"></script>
+</body>
+</html>
